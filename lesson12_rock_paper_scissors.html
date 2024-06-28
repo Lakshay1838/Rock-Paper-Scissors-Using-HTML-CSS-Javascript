@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage</title>
+    <link rel="stylesheet" href="lesson12_rock_paper_scissors_css.css">
+</head>
+<body>
+    <h3>Rock Paper Scissors</h3>
+    <button class="icon-btn" onclick="declareResult('rock')">
+        <img class="icon" src="./images/rock-emoji.png" alt="">
+    </button>
+    <button class="icon-btn" onclick="declareResult('paper')">
+        <img class="icon" src="./images/paper-emoji.png" alt="">
+    </button>
+    <button class="icon-btn" onclick="declareResult('scissors')">
+        <img class="icon" src="./images/scissors-emoji.png" alt="">
+    </button>
+
+    
+
+    <p class="js-result show-result">You Win.</p>
+    <p class="js-choices"></p>
+    <p class="js-score"></p>
+
+    <button class="reset-btn" onclick="
+    score.wins = 0  
+    score.loses = 0 
+    score.tie =0
+
+    updateScore();
+
+    localStorage.removeItem('score');
+    ">
+        Reset Score
+    </button>
+    <button class="auto-play-button"
+    onclick="autoPlay()">
+        Auto Play
+    </button>
+    <script src="lesson12_rock_paper_scissors_js.js"></script>
+</body>
+</html>
