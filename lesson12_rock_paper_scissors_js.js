@@ -66,9 +66,12 @@ function autoPlay()
                 declareResult(playersChoice);
             },1000);   
             isPlaying=true;
-    }
-    else{
-        clearInterval(interval);
-        isPlaying= false;
+    
+            document.querySelector('.auto-play-button').innerHTML = 'Stop Play';
+        }
+        else{
+            clearInterval(interval);
+            isPlaying= false;
+            document.querySelector('.auto-play-button').innerHTML = 'Auto Play';
     }
 }
